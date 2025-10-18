@@ -3,7 +3,8 @@ import Taskform from "./Components/Taskform";
 import TaskList from "./Components/TaskList";
 import Progresstracker from "./Components/Progresstracker";
 import { useEffect, useState } from "react";
-import "./Style.css";
+import "./Components/Style.css";
+
 
 export default function App() {
   const [tasks, setTasks] = useState([]);
