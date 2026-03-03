@@ -14,10 +14,20 @@ export default function TaskList({tasks , updateTask, deleteTask}) {
             </span>
           </div>
 
-          <div>
-            <button onClick={() => toggleComplete(index)}>
+          <div className="task-actions">
+            <button
+              type="button"
+              className={`btn ${task.completed ? "btn-undo" : "btn-complete"}`}
+              onClick={() => toggleComplete(index)}
+            >
               {task.completed ? "Undo" : "Complete"}</button>
-            <button onClick={() => deleteTask(index)}>Delete</button>
+            <button
+              type="button"
+              className="btn btn-delete"
+              onClick={() => deleteTask(index)}
+            >
+              Delete
+            </button>
           </div>
 
         </li>
